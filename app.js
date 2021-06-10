@@ -71,11 +71,12 @@ let sort_filter_options = document.querySelectorAll('input[type="radio"][name="s
 }
 //Add Task button handler
 {
-  document.getElementById('task-add-form').addEventListener('submit', function(){
+  document.getElementById('task-add-form').addEventListener('submit', function(event){
     let taskName = document.getElementById('taskName').value;
     let taskPriority = document.getElementById('taskPriority').value;
     let currentTasksAfterAdding = addTaskAPI(taskName, taskPriority);
     syncToDoTable(currentTasksAfterAdding);
+    event.preventDefault();
   });
 }
 //Get current tasks from API and write to table
