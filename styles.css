@@ -11,7 +11,7 @@ body
 {
 font-family: Arial, Helvetica, sans-serif;
 background-color: rgb(238, 216, 187);
-max-width:70%;
+max-width:80%;
 margin:auto;
 }
 
@@ -145,7 +145,5 @@ input:focus
 #footer
 {
     font-size: 1.2rem;
-    position:absolute;
-    right:10px;;
-    bottom: 10px;
+    float:right;
 }
