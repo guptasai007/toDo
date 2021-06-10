@@ -128,7 +128,7 @@ function sortTasksByNameAPI()
 
 function sortTasksByPriorityAPI()
 {
-  return tasksDatabase.sort((a, b) => (a.taskPriority < b.taskPriority) ? -1 : 1);
+  return tasksDatabase.sort((a, b) => (a.taskPriority > b.taskPriority) ? -1 : 1);
 }
 
 function filterOnTaskNameAPI()
