@@ -1,0 +1,151 @@
+*
+{
+    padding:0;
+    margin:0;
+}
+*
+{
+    color: rgb(145, 93, 68);
+}
+body
+{
+font-family: Arial, Helvetica, sans-serif;
+background-color: rgb(238, 216, 187);
+max-width:70%;
+margin:auto;
+}
+
+.page-title
+{
+    display:block;
+    text-align:center;
+    border-color: rgba(95, 20, 20, 0.507);
+    border-style: dotted;
+    padding:5px 10px;
+    margin:10px 0;
+}
+
+.task-container
+{
+    background-color: antiquewhite;
+    padding:15px;
+    margin: 10px 0;
+    display:block;
+    border-style:ridge;
+    border-color: rgb(245, 221, 189);
+    overflow:hidden;
+}
+.container-heading
+{
+    display:block;
+    font-weight: bold;
+    background-color : rgb(245, 221, 189);
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.task-field
+{
+    display:block;
+    margin:10px 0;
+}
+#taskName
+{
+    width:20em;
+}
+#taskPriority
+{
+    width:2em;
+}
+input
+{
+    padding:5px;
+    background-color: bisque;
+    font-size: medium;
+    margin-top: 10px;
+    margin-left:5px;
+    border-color: rgb(245, 221, 189);
+}
+
+input[type="text"], input[type="number"]
+{
+    width:5em;
+}
+
+input:focus
+{
+    outline-color:  rgb(245, 211, 167);
+}
+
+#todo-table
+{
+    margin-top:20px;
+    border: 1px groove rgb(245, 211, 167);
+    border-collapse: collapse;
+    width:100%;
+}
+
+#todo-table td, #todo-table th
+{
+    padding: 5px;
+}
+#todo-table th
+{
+    background-color: rgb(245, 221, 189);
+    border: 1px groove rgb(245, 211, 167);
+    text-align: left;
+}
+
+#todo-table tr:nth-child(even)
+{
+  background-color: rgb(245, 221, 189);  
+}
+#todo-table tr:hover
+{
+    background-color: rgb(238, 216, 187);
+    cursor: pointer;
+}
+
+#sort-dropdown, #filter-dropdown
+{
+    border-color:rgb(199, 178, 151);
+    background-color: bisque;
+    font-size: 1.1rem;
+    margin-left:10px;
+    display:none;
+}
+#filter-todo, #sort-todo
+{
+    width:0;
+    height:0;
+}
+#filter-radio-label, #sort-radio-label
+{
+    display:inline-block;
+    border: 1px groove rgb(245, 211, 167);
+    padding:5px;
+    margin:5px 0;
+    font-weight: bold;
+}
+#filter-radio-label:hover, #sort-radio-label:hover
+{
+    background-color: rgb(238, 216, 187);
+    cursor:pointer;
+}
+#filter-text
+{
+    font-size: 0.8em;
+    width:14rem;
+    margin-left:10px;
+    display:none;
+}
+#delete-todo
+{
+    float:right;
+}
+#footer
+{
+    font-size: 2.5rem;
+    position:absolute;
+    right:10px;;
+    bottom: 10px;
+}

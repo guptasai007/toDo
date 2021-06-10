@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <span class="page-title"><h1>To-Do App💻</h1></span>
+    
+    <div class="task-container">
+        <span class="container-heading">Add To-Do task ➕</span>
+        <form id="task-add-form">
+            <span class="task-field">
+           <label for="taskName">Task name:</label>
+           <input type="text" id="taskName" required>
+        </span>
+        <div class="clr"></div>
+            <span class="task-field">
+                <label for="taskPriority">Task priority <small>(Range [1-5], 5 - Highest priority):</small></label>
+           <input type="number" id="taskPriority" pattern="[1-5]{1}" min="1" max="5" value="1" required>
+        </span>
+           <input type="submit" value="Add Task✔️">
+       </form>
+    </div>
+
+        <div class="task-container">
+            <span class="container-heading">Sort & Filter To-Dos 🍎|🍊</span>
+            <span class="task-field">
+                <label for="sort-todo" id="sort-radio-label">Sort To-Dos</label>
+                <input type="radio" id="sort-todo" name="sort-filter-radio" value="sort">
+                <select id="sort-dropdown">
+                    <option>Sort By Task Name</option>
+                    <option>Sort By Task Priority</option>
+                </select>
+            </span>
+            <span class="task-field">
+                <label for="filter-todo" id="filter-radio-label">Filter To-Dos</label>
+                <input type="radio" id="filter-todo" name="sort-filter-radio" value="filter">
+                <select id="filter-dropdown">
+                    <option>Filter On Task Name</option>
+                    <option>Filter On Task Priority</option>
+                </select>
+                <input type="text" id="filter-text" placeholder="Search with Task ">
+            </span>
+        </div>
+        
+        <div class="task-container">
+            <span class="container-heading">Your To-Dos🧑‍💼</span>
+            <table id="todo-table">
+                <tr>
+                    <th>Task Name</th>
+                    <th>Task Priority</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="todo-table-body">
+                </tbody>
+        </table>
+            <input type="button" value="Delete selected🗑️" id="delete-todo">
+        </div>
+        
+        <div id="footer">Made with 🖤 by Abhishek</div>
+    </body>
+    <script src="app.js"></script>
+    </html>
