@@ -50,7 +50,7 @@ margin:auto;
 }
 #taskName
 {
-    width:20em;
+    width:15em;
 }
 #taskPriority
 {
@@ -144,7 +144,7 @@ input:focus
 }
 #footer
 {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     position:absolute;
     right:10px;;
     bottom: 10px;
