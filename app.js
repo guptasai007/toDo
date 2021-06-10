@@ -60,11 +60,13 @@ let sort_filter_options = document.querySelectorAll('input[type="radio"][name="s
     if(filterDropdownValue === 'Filter On Task Name')
     {
       console.log('Filter On Name');
+      document.getElementById('filter-text').placeholder = "Filter on task name"; 
       filterOnTaskNameAPI();
     }
     else if(filterDropdownValue === 'Filter On Task Priority')
     {
       console.log('Filter On Priority');
+      document.getElementById('filter-text').placeholder = "Filter on task priority";
       filterOnTaskPriorityAPI();
     }
   } 
