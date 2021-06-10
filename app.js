@@ -111,7 +111,19 @@ let sort_filter_options = document.querySelectorAll('input[type="radio"][name="s
       return row;
     }
 }
-
+//Delete button handler
+{
+  document.querySelector('#delete-todo').addEventListener('click', function()
+  {
+    let taskIndexArray = Array.from(document.querySelectorAll('input[type="checkbox"][id*="delete-task-"]:checked'))
+    .map(row=>Number(row.id.split('-task-')[1]));
+    tasks = [...tasksDatabase];
+    console.log(taskIndexArray, tasksDatabase);
+    let currentTasksAfterDeletion = deleteTasksWithIndexAPI(taskIndexArray);
+    console.log(currentTasksAfterDeletion); 
+    syncToDoTable(currentTasksAfterDeletion);
+  });
+}
 
 //<<<Server Side JavaScript>>>
 
@@ -143,5 +155,17 @@ function filterOnTaskPriorityAPI()
 
 function getCurrentTasksAPI()
 {
+  return tasksDatabase;
+}
+
+function deleteTasksWithIndexAPI(taskIndexArray)
+{
+  tasksAfterDeletion = [];
+
+    for(let i = 0; i < tasksDatabase.length; i++)
+    {
+      if(!taskIndexArray.includes(i)) tasksAfterDeletion.push(tasksDatabase[i]);
+    }
+    tasksDatabase = tasksAfterDeletion;  
   return tasksDatabase;
 }
